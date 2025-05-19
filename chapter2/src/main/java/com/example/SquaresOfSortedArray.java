@@ -10,23 +10,30 @@ public class SquaresOfSortedArray {
      */
     public static void main(String[] args) {
 
-        int[] nums = new int[]{-4, -1, 0, 3, 10};
+//        int[] nums = new int[]{-4, -1, 0, 3, 10};
+        int[] nums = new int[]{-7, -3, 2, 3, 11};
         System.out.println(Arrays.toString(squaresOfSortedArray(nums)));
     }
 
     private static int[] squaresOfSortedArray(int[] nums) {
 
-        int start = 0;
-        int end = nums.length - 1;
+        int n = nums.length;
+        int[] result = new int[n];
 
-        while (start < end) {
+        for (int start = 0, end = n - 1, k = n -1; start <= end;) {
 
-            nums[start] = nums[start] * nums[start];
-            nums[end] = nums[end] * nums[end];
-            start++;
-            end--;
+            int a = nums[start] * nums[start];
+            int b = nums[end] * nums[end];
+
+            if (a > b) {
+                result[k--] = a;
+                start++;
+            } else {
+                result[k--] = b;
+                end--;
+            }
         }
 
-        return nums;
+        return result;
     }
 }
