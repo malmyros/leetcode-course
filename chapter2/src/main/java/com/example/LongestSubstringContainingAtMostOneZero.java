@@ -19,7 +19,7 @@ public class LongestSubstringContainingAtMostOneZero {
         int ans = 0;
 
         for (int right = 0; right < s.length(); right++) {
-            if (s.charAt(right)== '0') {
+            if (s.charAt(right) == '0') {
                 curr++;
             }
 
