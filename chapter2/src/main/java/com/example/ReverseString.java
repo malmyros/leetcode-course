@@ -4,6 +4,11 @@ import java.util.Arrays;
 
 public class ReverseString {
 
+    /**
+     * Given an array of characters return
+     * array a revered array of characters
+     *
+     */
     public static void main(String[] args) {
 
         char[] input = new char[]{'h', 'e', 'l', 'l', 'o'};

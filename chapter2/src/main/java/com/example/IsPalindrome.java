@@ -3,7 +3,7 @@ package com.example;
 public class IsPalindrome {
 
 
-    /*
+    /**
         Given an input string determine
         if the input is a palindrome.
      */
