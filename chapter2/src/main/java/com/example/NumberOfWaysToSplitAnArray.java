@@ -26,9 +26,9 @@ public class NumberOfWaysToSplitAnArray {
 
         int ans = 0;
         for (int i = 0; i < nums.length -1; i++) {
-            int right = prefix[i];
-            int left = prefix[nums.length -1] - prefix[i];
-            if (right >= left) {
+            int left = prefix[i];
+            int right = prefix[nums.length -1] - prefix[i];
+            if (left >= right) {
                 ans++;
             }
         }
