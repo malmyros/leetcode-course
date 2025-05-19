@@ -19,7 +19,7 @@ public class LongestValidSubArray {
             cur += nums[right];
             while (cur > target) {
                 cur -= nums[left];
-                left--;
+                left++;
             }
 
             answer = Math.max(cur, right - left + 1);
