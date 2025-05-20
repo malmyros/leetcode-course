@@ -21,9 +21,8 @@ public class MyListNode {
         one.next = two;
         two.next = three;
 
-        ListNode head = one;
-        System.out.println(head.val);
-        System.out.println(head.next.val);
-        System.out.println(head.next.next.val);
+        System.out.println(one.val);
+        System.out.println(one.next.val);
+        System.out.println(one.next.next.val);
     }
 }
