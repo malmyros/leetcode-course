@@ -1,4 +1,4 @@
-package com.example.main;
+package com.example.main.singlylinkedlist;
 
 public class AddNodeAtPosition {
 

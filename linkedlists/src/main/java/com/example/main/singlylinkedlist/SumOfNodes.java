@@ -1,6 +1,6 @@
-package com.example.main;
+package com.example.main.singlylinkedlist;
 
-public class SumOfNodesRecursively {
+public class SumOfNodes {
 
     public static void main(String[] args) {
 
@@ -16,10 +16,12 @@ public class SumOfNodesRecursively {
 
     private static int sumOfNodes(ListNode listNode) {
 
-        if (listNode == null) {
-            return 0;
+        int ans = 0;
+        while (listNode != null) {
+            ans += listNode.val;
+            listNode = listNode.next;
         }
 
-        return listNode.val + sumOfNodes(listNode.next);
+        return ans;
     }
 }
