@@ -24,11 +24,7 @@ public class CheckAllCharactersHaveEqualOccurrences {
             frequency.put(c, frequency.getOrDefault(c, 0) + 1);
         }
 
-        Set<Integer> set = new HashSet<>();
-        for (Character c : frequency.keySet()) {
-            set.add(frequency.get(c));
-        }
-
+        Set<Integer> set = new HashSet<>(frequency.values());
         return set.size() == 1;
     }
 }
