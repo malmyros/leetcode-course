@@ -18,19 +18,14 @@ public class CountNumbersOfNiceSubArrays {
 
     private static int numberOfNiceSubArrays(int[] nums, int k) {
 
-        int[] binary = new int[nums.length];
-        for (int i = 0; i < nums.length; i++) {
-            binary[i] = Math.abs(nums[i] % 2);
-        }
-
         Map<Integer, Integer> counts = new HashMap<>();
         counts.put(0, 1);
 
         int curr = 0;
         int ans = 0;
 
-        for (int num : binary) {
-            curr += num;
+        for (int num : nums) {
+            curr += num % 2;
             ans += counts.getOrDefault(curr - k, 0);
             counts.put(curr, counts.getOrDefault(curr, 0) + 1);
         }
