@@ -1,4 +1,4 @@
-package com.example.additional;
+package com.example.additional.twopointer;
 
 public class MinimumCommonValue {
 
