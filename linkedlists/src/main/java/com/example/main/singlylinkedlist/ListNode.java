@@ -1,6 +1,6 @@
 package com.example.main.singlylinkedlist;
 
-class ListNode {
+public class ListNode {
 
     int val;
     ListNode next;

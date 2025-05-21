@@ -10,22 +10,16 @@ public class DeleteNodeAtPosition {
 
         head.next = one;
         one.next = two;
-        printValues(head);
+        ListNodeUtils.printValues(head);
         System.out.println("----");
 
         deleteNode(one);
-        printValues(head);
+        ListNodeUtils.printValues(head);
     }
 
     private static void deleteNode(ListNode prevNode) {
         prevNode.next = prevNode.next.next;
     }
 
-    private static void printValues(ListNode listNode) {
 
-        while (listNode != null) {
-            System.out.println(listNode.val);
-            listNode = listNode.next;
-        }
-    }
 }
