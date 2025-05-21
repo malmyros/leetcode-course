@@ -16,15 +16,12 @@ public class BackSpaceStringCompare {
     }
 
     private static boolean areStringsEqual(String s, String t) {
-        String s1 = getCleanString(s);
-        String s2 = getCleanString(t);
-        return s1.equals(s2);
+        return getCleanString(s).equals(getCleanString(t));
     }
 
-    private static String getCleanString(String s) {
+    private static Stack<Character> getCleanString(String s) {
 
         Stack<Character> stack = new Stack<>();
-        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < s.length(); i++) {
 
             char c = s.charAt(i);
@@ -42,8 +39,6 @@ public class BackSpaceStringCompare {
             }
         }
 
-
-        stack.forEach(sb::append);
-        return sb.toString();
+        return stack;
     }
 }
