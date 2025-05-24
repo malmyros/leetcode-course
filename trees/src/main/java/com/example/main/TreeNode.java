@@ -2,13 +2,23 @@ package com.example.main;
 
 public class TreeNode {
 
-    private int val;
+    int val;
 
-    private TreeNode left;
+    TreeNode left;
 
-    private TreeNode right;
+    TreeNode right;
 
     public TreeNode(int val) {
         this.val = val;
+    }
+
+    public TreeNode(
+            int val,
+            TreeNode left,
+            TreeNode right) {
+
+        this.val = val;
+        this.left = left;
+        this.right = right;
     }
 }
