@@ -1,4 +1,6 @@
-package com.example.main;
+package com.example.main.breadthfirstsearch;
+
+import com.example.main.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

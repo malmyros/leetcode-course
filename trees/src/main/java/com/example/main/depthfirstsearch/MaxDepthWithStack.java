@@ -1,4 +1,6 @@
-package com.example.main;
+package com.example.main.depthfirstsearch;
+
+import com.example.main.TreeNode;
 
 import java.util.Stack;
 
